@@ -1,11 +1,13 @@
 import asyncio
+import os
+
 import aiohttp
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.types import FSInputFile
 
-BOT_TOKEN = "8482336373:AAGMhAgif1yO_V5F-yOqNkDtmJGyeu4xGKk"
-WEATHER_API = "49015a6d51ee5b278338c8d730a1f313"
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+WEATHER_API = os.getenv('WEATHER_API')
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
